@@ -1,0 +1,173 @@
+/* 
+Theme Name: The Indigo Mill
+Version: 1.0 
+Description: Theme for The Indigo Mill - a child theme of Olsen.
+Author: The Indigo Mill
+Author URI: https://theindigomill.com 
+Template: olsen 
+*/
+
+/* Logo */
+
+.custom-logo {
+	max-width: 150px;
+}
+
+/*** Colors ***/
+/* Logo Color = #3c5270 */
+
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.entry-content a  {
+	color: #808080;
+}
+
+#menu-secondary-1 a {
+	color: #3c5270;
+}
+
+/* Mobile Menu Hover
+ * Shop Buttons Hover */
+.menu-toggle:hover,
+.button.product_type_simple.add_to_cart_button:hover,
+.button.product_type_variable.add_to_cart_button:hover {
+	background-color: #3c5270;
+	color: #fff;
+}
+
+.menu-toggle,
+.button.product_type_simple,
+.button.product_type_variable,
+.button.product_type_variable:visited,
+.button.single_add_to_cart_button:hover,
+.woocommerce-page.woocommerce-cart .button:hover,
+.button.wc-forward:hover {
+	background-color: #eee;
+	color: #3c5270;
+}
+
+.button.single_add_to_cart_button {
+	outline: 0;
+}
+
+.button.product_type_simple:focus,
+.button.single_add_to_cart_button,
+.wpcf7-form-control.wpcf7-submit,
+.woocommerce-cart .button,
+.button.wc-forward,
+.button.alt {
+	background-color: #3c5270;
+	color: #eee;
+}
+
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-message .button.wc-forward {
+	background-color: #eee;
+	color: #161616;
+}
+
+.woocommerce .woocommerce-message {
+	border-left: 0.618em solid #b49543;
+}
+
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-error {
+	background-color: #3c5270;
+	color: #eee;
+	border-left: 0.618em solid #b49543;
+}
+
+
+/* Social Media Icons */
+.jetpack-social-widget-item .icon-instagram,
+.jetpack-social-widget-item .icon-facebook {
+	color: #ccc;
+}
+
+
+/* Hide "In stock" pop up on summary page */
+.woocommerce-variation-availability { 
+	display: none;
+}
+
+
+/* Price on summary page */
+.summary .woocommerce-Price-amount { 
+	color: #b49543;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+
+/*** Typography ***/
+
+p, .wp-block-button__link {
+	font-family: Cormorant Garamond;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.woocommerce-mini-cart__buttons.buttons {
+	font-family: Lato;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+nav {
+	font-family: Cormorant Garamond;
+	font-weight: 600;
+}
+
+.main-navigation,
+.main-navigation a {
+	font-size: 1rem;
+	color: #999;
+}
+
+
+/*** Contact Form ***/
+
+span.wpcf7-list-item { 
+	display: block; 
+}
+
+.wpcf7-submit:focus {
+	outline: none;
+}
+
+div.wpcf7 .ajax-loader.is-active {
+	visibility: hidden;
+}
+
+div.wpcf7-validation-errors {
+	border-color: #e8c7c4;
+}
+
+
+/*** Hide Page Titles
+ * Hide Social Icons Above Logo ***/
+
+.page .entry-title,
+.woocommerce-page .page-title,
+.icon-chain,
+#menu-item-1862,
+#menu-item-2019,
+.site-header .jetpack-social-navigation {
+	display: none;
+} 
+
+
+/* Hide theme info in footer */
+
+.site-info {
+	display: none;
+}
