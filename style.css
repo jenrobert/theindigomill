@@ -31,8 +31,8 @@ h6,
 	color: #3c5270;
 }
 
-/* Mobile Menu Hover
- * Shop Buttons Hover */
+/* Buttons */
+
 .menu-toggle:hover,
 .button.product_type_simple.add_to_cart_button:hover,
 .button.product_type_variable.add_to_cart_button:hover {
@@ -46,7 +46,8 @@ h6,
 .button.product_type_variable:visited,
 .button.single_add_to_cart_button:hover,
 .woocommerce-page.woocommerce-cart .button:hover,
-.button.wc-forward:hover {
+.button.wc-forward:hover,
+.wpcf7-form .wpcf7-form-control.wpcf7-submit:hover {
 	background-color: #eee;
 	color: #3c5270;
 }
@@ -64,6 +65,8 @@ h6,
 	background-color: #3c5270;
 	color: #eee;
 }
+
+/* WooCommerce Messages */
 
 .woocommerce .woocommerce-message,
 .woocommerce .woocommerce-message .button.wc-forward {
@@ -84,6 +87,7 @@ h6,
 
 
 /* Social Media Icons */
+
 .jetpack-social-widget-item .icon-instagram,
 .jetpack-social-widget-item .icon-facebook {
 	color: #ccc;
@@ -91,12 +95,14 @@ h6,
 
 
 /* Hide "In stock" pop up on summary page */
+
 .woocommerce-variation-availability { 
 	display: none;
 }
 
 
 /* Price on summary page */
+
 .summary .woocommerce-Price-amount { 
 	color: #b49543;
 	font-size: 18px;
@@ -104,12 +110,19 @@ h6,
 }
 
 
-/*** Typography ***/
+/* Typography */
 
-p, .wp-block-button__link {
+p, 
+/*.wp-block-button__link,*/
+.service-pricing {
 	font-family: Cormorant Garamond;
 	font-weight: 400;
 	font-size: 16px;
+}
+
+.wp-block-button__link,
+.service-pricing {
+	font-family: Cormorant Garamond;
 }
 
 .woocommerce-mini-cart__buttons.buttons {
@@ -134,7 +147,32 @@ nav {
 }
 
 
-/*** Contact Form ***/
+/* Services Page - Pricing Table */
+
+.wp-block-table.is-style-stripes tr:nth-child(odd) {
+	background: transparent;
+}
+
+.wp-block-table.service-pricing.is-style-stripes {
+	border-bottom: none;
+}
+
+.service-pricing tr td:first-child {
+	text-align: right;
+	padding-right: 15px;
+}
+
+.service-pricing tr td:last-child {
+	padding-left: 15px;
+}
+
+.service-pricing {
+	line-height: 1;
+	color: #808080;
+}
+
+
+/* Contact Form */
 
 span.wpcf7-list-item { 
 	display: block; 
@@ -148,13 +186,13 @@ div.wpcf7 .ajax-loader.is-active {
 	visibility: hidden;
 }
 
-div.wpcf7-validation-errors {
+div.wpcf7-response-output {
 	border-color: #e8c7c4;
 }
 
 
-/*** Hide Page Titles
- * Hide Social Icons Above Logo ***/
+/* Hide Page Titles
+ * Hide Social Icons Above Logo */
 
 .page .entry-title,
 .woocommerce-page .page-title,
@@ -171,3 +209,39 @@ div.wpcf7-validation-errors {
 .site-info {
 	display: none;
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width: 845px) {
+
+	div.wp-block-media-text.about-us {
+		display: inline-block;
+	}
+
+	.wp-block-media-text.about-us .wp-block-media-text__media img {
+		width: 50%;
+	}
+
+	.wp-block-media-text.about-us .wp-block-media-text__media,
+	.wp-block-media-text__content p.about-us {
+		text-align: center !important;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.services-img-01 {
+		text-align: center;
+		width: 50%;
+	}
+
+	.services-img-02,
+	.services-img-03 {
+		display: none;
+	}
+}
+
+
+
