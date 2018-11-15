@@ -7,18 +7,24 @@ Author URI: https://theindigomill.com
 Template: olsen 
 */
 
-/* Logo */
+
+
+
+
+
+/* Header */
 
 .custom-logo {
 	max-width: 150px;
 }
 
-/*** Colors ***/
-/* Logo Color = #3c5270 */
+.entry-content > :first-child.wp-block-image { /* Fix for header images */
+  text-align: center;
+}
 
 p, 
 h1, 
-h2, 
+h2,
 h3, 
 h4, 
 h5, 
@@ -27,20 +33,77 @@ h6,
 	color: #808080;
 }
 
+body, 
+/*.wp-block-button__link,*/
+.service-pricing {
+	font-family: Cormorant Garamond;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+nav {
+	font-family: Cormorant Garamond;
+	font-weight: 600;
+}
+
+.page .entry-title,
+.woocommerce-page .page-title,
+.icon-chain,
+#menu-item-1862,
+#menu-item-2019,
+.site-header .jetpack-social-navigation { /* Hide Page Titles, Hide Social Icons Above Logo */
+	display: none;
+} 
+
+
+/* Navigation */
+
+.main-navigation,
+.main-navigation a {
+	font-size: 1rem;
+	color: #999;
+}
+
 #menu-secondary-1 a {
 	color: #3c5270;
 }
 
+.menu-toggle,
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: transparent;
+	color: #808080;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
 /* Buttons */
 
-.menu-toggle:hover,
+ .call-to-action .wp-block-button__link {
+  background-color: transparent;
+  border: 1px solid #3c5270;
+  color: #3c5270;
+} 
+
+.call-to-action:hover .wp-block-button__link:hover {
+  background-color: #eee;
+  border: 1px solid #eee;
+  color: #3c5270;
+}
+
 .button.product_type_simple.add_to_cart_button:hover,
 .button.product_type_variable.add_to_cart_button:hover {
 	background-color: #3c5270;
 	color: #fff;
 }
 
-.menu-toggle,
 .button.product_type_simple,
 .button.product_type_variable,
 .button.product_type_variable:visited,
@@ -52,6 +115,9 @@ h6,
 	color: #3c5270;
 }
 
+.menu-toggle,
+.menu-toggle:hover,
+.menu-toggle:focus,
 .button.single_add_to_cart_button {
 	outline: 0;
 }
@@ -66,60 +132,6 @@ h6,
 	color: #eee;
 }
 
-/* WooCommerce Messages */
-
-.woocommerce .woocommerce-message,
-.woocommerce .woocommerce-message .button.wc-forward {
-	background-color: #eee;
-	color: #161616;
-}
-
-.woocommerce .woocommerce-message {
-	border-left: 0.618em solid #b49543;
-}
-
-.woocommerce .woocommerce-info,
-.woocommerce .woocommerce-error {
-	background-color: #3c5270;
-	color: #eee;
-	border-left: 0.618em solid #b49543;
-}
-
-
-/* Social Media Icons */
-
-.jetpack-social-widget-item .icon-instagram,
-.jetpack-social-widget-item .icon-facebook {
-	color: #ccc;
-}
-
-
-/* Hide "In stock" pop up on summary page */
-
-.woocommerce-variation-availability { 
-	display: none;
-}
-
-
-/* Price on summary page */
-
-.summary .woocommerce-Price-amount { 
-	color: #b49543;
-	font-size: 18px;
-	font-weight: 600;
-}
-
-
-/* Typography */
-
-p, 
-/*.wp-block-button__link,*/
-.service-pricing {
-	font-family: Cormorant Garamond;
-	font-weight: 400;
-	font-size: 16px;
-}
-
 .wp-block-button__link,
 .service-pricing {
 	font-family: Cormorant Garamond;
@@ -129,21 +141,15 @@ p,
 	font-family: Lato;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-nav {
-	font-family: Cormorant Garamond;
-	font-weight: 600;
+
+/* About Us */
+
+.about-us {
+  margin-bottom: 25px;
 }
 
-.main-navigation,
-.main-navigation a {
-	font-size: 1rem;
-	color: #999;
+.about-us-header {
+  margin-bottom: 15px;
 }
 
 
@@ -171,6 +177,9 @@ nav {
 	color: #808080;
 }
 
+.pricing-table {
+  margin-bottom: 30px;
+}
 
 /* Contact Form */
 
@@ -191,23 +200,50 @@ div.wpcf7-response-output {
 }
 
 
-/* Hide Page Titles
- * Hide Social Icons Above Logo */
+/* WooCommerce */
 
-.page .entry-title,
-.woocommerce-page .page-title,
-.icon-chain,
-#menu-item-1862,
-#menu-item-2019,
-.site-header .jetpack-social-navigation {
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-message .button.wc-forward {
+	background-color: #eee;
+	color: #161616;
+}
+
+.woocommerce .woocommerce-message {
+	border-left: 0.618em solid #b49543;
+}
+
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-error {
+	background-color: #3c5270;
+	color: #eee;
+	border-left: 0.618em solid #b49543;
+}
+
+.woocommerce-variation-availability { /* Hide "In stock" pop up on summary page */
 	display: none;
-} 
+}
+
+.summary .woocommerce-Price-amount { /* Price on summary page */
+	color: #b49543;
+	font-size: 18px;
+	font-weight: 600;
+}
 
 
-/* Hide theme info in footer */
+/* Footer */
 
-.site-info {
+.site-info { /* Hide Theme Info */
 	display: none;
+}
+
+.copyright, 
+.photography-credit {
+	/*font-family: Lato;*/
+	font-size: 15px;
+}
+
+.photography-credit {
+	margin-top: -25px;
 }
 
 

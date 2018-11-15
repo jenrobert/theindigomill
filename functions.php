@@ -14,6 +14,14 @@ function theindigomill_styles() {
 add_action( 'wp_enqueue_scripts', 'theindigomill_styles' );
 
 /**
+ * Child Theme Setup
+ */
+function theindigomill_theme_setup() {
+	add_image_size( 'page-thumbnail', 1040, 350, true );
+}
+add_action( 'after_theme_setup', 'theindigomill_theme_setup', 11 );
+
+/**
  * Parent theme overrides
  */
 
@@ -49,4 +57,27 @@ function theindigomill_woocommerce_header_cart() {
 		</div>
 	</div>
 	<?php
+}
+
+/**
+ * Displays an optional post thumbnail.
+ */
+function olsen_post_thumbnail() {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+
+	if ( is_singular() ) :
+		?>
+		<div class="entry-featured">
+			<?php the_post_thumbnail( 'page-thumbnail' ); ?>
+		</div><!-- .post-thumbnail -->
+		<?php
+	else :
+		?>
+		<a class="entry-featured" href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+		</a>
+		<?php
+	endif;
 }
