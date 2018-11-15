@@ -43,6 +43,7 @@ function theindigomill_woocommerce_header_cart() {
 		<div class="site-header-cart-wrap <?php echo esc_attr( $class ); ?>">
 			<div class="site-header-cart-trigger">
 				<?php olsen_woocommerce_cart_link(); ?>
+				<a class="account" href="<?php echo esc_url( home_url() . '/my-account' ); ?>"> - <?php echo esc_html__( 'My Account', 'theindigomill' ); ?></a>
 			</div>
 
 			<div class="site-header-cart-items">
