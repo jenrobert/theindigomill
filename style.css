@@ -7,29 +7,25 @@ Author URI: https://theindigomill.com
 Template: olsen 
 */
 
-
-
-
-
-
 /* Header */
 
 .custom-logo {
 	max-width: 150px;
 }
 
-.entry-content > :first-child.wp-block-image { /* Fix for header images */
-  text-align: center;
+.entry-content > :first-child.wp-block-image {
+	/* Fix for header images */
+	text-align: center;
 }
 
-p, 
-h1, 
+p,
+h1,
 h2,
-h3, 
-h4, 
-h5, 
-h6, 
-.entry-content a  {
+h3,
+h4,
+h5,
+h6,
+.entry-content a {
 	color: #808080;
 }
 
@@ -41,26 +37,22 @@ body,
 	font-size: 16px;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 nav {
 	font-family: Cormorant Garamond;
 	font-weight: 600;
 }
 
+/* Hide Page Titles */
 .page .entry-title,
-.woocommerce-page .page-title,
-.icon-chain,
-#menu-item-1862,
-#menu-item-2019,
-.site-header .jetpack-social-navigation { /* Hide Page Titles, Hide Social Icons Above Logo */
+.woocommerce-page .page-title {
 	display: none;
-} 
-
+}
 
 /* Navigation */
 
@@ -83,19 +75,36 @@ nav {
 	margin-right: auto;
 }
 
+.site-header-top-bar {
+	border-bottom: 1px solid #ebebeb;
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-header-top-bar .site-header-cart-wrap {
+	border-bottom: none;
+}
+
+.site-header-top-bar .jetpack-social-navigation ul {
+	margin: 0;
+}
+
+.site-social {
+	padding: 7px 0 10px;
+}
 
 /* Buttons */
 
- .call-to-action .wp-block-button__link {
-  background-color: transparent;
-  border: 1px solid #3c5270;
-  color: #3c5270;
-} 
+.call-to-action .wp-block-button__link {
+	background-color: transparent;
+	border: 1px solid #3c5270;
+	color: #3c5270;
+}
 
 .call-to-action:hover .wp-block-button__link:hover {
-  background-color: #eee;
-  border: 1px solid #eee;
-  color: #3c5270;
+	background-color: #eee;
+	border: 1px solid #eee;
+	color: #3c5270;
 }
 
 .button.product_type_simple.add_to_cart_button:hover,
@@ -141,17 +150,15 @@ nav {
 	font-family: Lato;
 }
 
-
 /* About Us */
 
 .about-us {
-  margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .about-us-header {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
-
 
 /* Services Page - Pricing Table */
 
@@ -178,13 +185,13 @@ nav {
 }
 
 .pricing-table {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 /* Contact Form */
 
-span.wpcf7-list-item { 
-	display: block; 
+span.wpcf7-list-item {
+	display: block;
 }
 
 .wpcf7-submit:focus {
@@ -198,7 +205,6 @@ div.wpcf7 .ajax-loader.is-active {
 div.wpcf7-response-output {
 	border-color: #e8c7c4;
 }
-
 
 /* WooCommerce */
 
@@ -219,24 +225,26 @@ div.wpcf7-response-output {
 	border-left: 0.618em solid #b49543;
 }
 
-.woocommerce-variation-availability { /* Hide "In stock" pop up on summary page */
+.woocommerce-variation-availability {
+	/* Hide "In stock" pop up on summary page */
 	display: none;
 }
 
-.summary .woocommerce-Price-amount { /* Price on summary page */
+.summary .woocommerce-Price-amount {
+	/* Price on summary page */
 	color: #b49543;
 	font-size: 18px;
 	font-weight: 600;
 }
 
-
 /* Footer */
 
-.site-info { /* Hide Theme Info */
+.site-info {
+	/* Hide Theme Info */
 	display: none;
 }
 
-.copyright, 
+.copyright,
 .photography-credit {
 	/*font-family: Lato;*/
 	font-size: 15px;
@@ -246,11 +254,9 @@ div.wpcf7-response-output {
 	margin-top: -25px;
 }
 
-
 /* Media Queries */
 
 @media screen and (max-width: 845px) {
-
 	div.wp-block-media-text.about-us {
 		display: inline-block;
 	}
@@ -263,11 +269,9 @@ div.wpcf7-response-output {
 	.wp-block-media-text__content p.about-us {
 		text-align: center !important;
 	}
-
 }
 
 @media screen and (max-width: 600px) {
-
 	.services-img-01 {
 		text-align: center;
 		width: 50%;
@@ -278,6 +282,3 @@ div.wpcf7-response-output {
 		display: none;
 	}
 }
-
-
-

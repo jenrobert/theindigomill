@@ -30,12 +30,6 @@
 
 					<div class="site-branding textcenter-xs">
 
-						<?php if ( function_exists( 'jetpack_social_menu' ) ) : ?>
-							<div class="site-social">
-								<?php jetpack_social_menu(); ?>
-							</div>
-						<?php endif; ?>
-
 						<?php if ( has_custom_logo() ) {
 							the_custom_logo();
 						} ?>

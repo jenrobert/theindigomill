@@ -39,7 +39,13 @@ function theindigomill_woocommerce_header_cart() {
 		$class = '';
 	}
 	?>
-	<div id="site-header-cart" class="site-header-cart">
+	<div id="site-header-top-bar" class="site-header-top-bar">
+		<?php if ( function_exists( 'jetpack_social_menu' ) ) : ?>
+			<div class="site-social">
+				<?php jetpack_social_menu(); ?>
+			</div>
+		<?php endif; ?>
+
 		<div class="site-header-cart-wrap <?php echo esc_attr( $class ); ?>">
 			<div class="site-header-cart-trigger">
 				<?php olsen_woocommerce_cart_link(); ?>
