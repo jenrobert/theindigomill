@@ -93,6 +93,12 @@ nav {
 	padding: 7px 0 10px;
 }
 
+a.account:before {
+	content: '\2022';
+	opacity: 0.3;
+	margin: 0 4px 0 2px;
+}
+
 /* Buttons */
 
 .call-to-action .wp-block-button__link {
@@ -242,6 +248,22 @@ div.wpcf7-response-output {
 .site-info {
 	/* Hide Theme Info */
 	display: none;
+}
+
+.site-footer .menu {
+	display: block;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.site-footer .menu li {
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.site-footer .menu a {
+	font-size: 16px;
+	margin: 0;
 }
 
 .copyright,

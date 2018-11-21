@@ -17,9 +17,15 @@ add_action( 'wp_enqueue_scripts', 'theindigomill_styles' );
  * Child Theme Setup
  */
 function theindigomill_theme_setup() {
+	// Add additional sizes for Post Thumbnails on posts and pages.
 	add_image_size( 'page-thumbnail', 1040, 350, true );
+
+	// Register new menu to use wp_nav_menu() in the footer.
+	register_nav_menus( array(
+		'footer-menu' => esc_html__( 'Footer Menu', 'theindigomill' ),
+	) );
 }
-add_action( 'after_theme_setup', 'theindigomill_theme_setup', 11 );
+add_action( 'after_setup_theme', 'theindigomill_theme_setup', 11 );
 
 /**
  * Parent theme overrides
@@ -49,7 +55,7 @@ function theindigomill_woocommerce_header_cart() {
 		<div class="site-header-cart-wrap <?php echo esc_attr( $class ); ?>">
 			<div class="site-header-cart-trigger">
 				<?php olsen_woocommerce_cart_link(); ?>
-				<a class="account" href="<?php echo esc_url( home_url() . '/my-account' ); ?>"> - <?php echo esc_html__( 'My Account', 'theindigomill' ); ?></a>
+				<a class="account" href="<?php echo esc_url( home_url() . '/my-account' ); ?>"><?php echo esc_html__( 'My Account', 'theindigomill' ); ?></a>
 			</div>
 
 			<div class="site-header-cart-items">
