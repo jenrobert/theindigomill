@@ -266,6 +266,10 @@ div.wpcf7-response-output {
 	margin: 0;
 }
 
+#footer-menu a {
+	color: #3c5270;
+}
+
 .copyright,
 .photography-credit {
 	/*font-family: Lato;*/
