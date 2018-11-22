@@ -22,7 +22,7 @@
 						'menu_id'        => 'footer-menu',
 					) ); ?>
 					<p class="copyright">&copy; <?php echo date('Y') . esc_html__( ' The Indigo Mill', 'theindigomill' ); ?></p>
-					<p class="photography-credit"><?php echo esc_html__( 'Photography by ', 'theindigomill' ); ?><a href="<?php echo esc_url( 'https://www.markiewalden.com/' ); ?>"><?php echo esc_html__( 'Markie Walden', 'theindigomill' ); ?></p>
+					<p class="photography-credit"><?php echo esc_html__( 'Photography by ', 'theindigomill' ); ?><a href="<?php echo esc_url( 'https://www.markiewalden.com/' ); ?>"><?php echo esc_html__( 'Markie Walden', 'theindigomill' ); ?></a></p>
 
 				</footer><!-- #colophon -->
 
