@@ -280,6 +280,24 @@ div.wpcf7-response-output {
 	margin-top: -25px;
 }
 
+.site-footer .jetpack-social-navigation-svg li a {
+	font-size: 19px;
+}
+
+.site-footer .jetpack-social-navigation-svg .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 845px) {
@@ -303,8 +321,13 @@ div.wpcf7-response-output {
 		width: 50%;
 	}
 
+	.site-header-top-bar .site-social,
 	.services-img-02,
 	.services-img-03 {
 		display: none;
+	}
+
+	.site-header-top-bar {
+		justify-content: flex-end;
 	}
 }
