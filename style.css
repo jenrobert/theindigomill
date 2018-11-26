@@ -298,6 +298,18 @@ div.wpcf7-response-output {
 	word-wrap: normal !important;
 }
 
+/* Fade-In Effect  */
+.fade-in {
+	transition: all 1s ease;
+	transform: translateY(75px);
+	opacity: 0;
+}
+
+.fade-in.visible {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 845px) {
